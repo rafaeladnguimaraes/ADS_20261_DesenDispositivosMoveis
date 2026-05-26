@@ -52,6 +52,10 @@ h1{
     margin-right: 50px;
     background-color: #E67E22;
 }
+.slogan{
+    margin-top: 150px;
+    margin-left: 10%;
+}
 /* cabeçalho */
 .main-nav{
     display: flex;
@@ -155,4 +159,66 @@ h3{
     transform: scale(1.15);
     transition: 0.5s;
     filter:grayscale(0%);
+}
+/* galeria 2*/
+.galery-2>figure{
+    width: 70%;
+    height: 450px;
+    /* background-color: #555; */
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.galery-2>figure>img{
+    width: 10%;
+    height: 100%;
+    object-fit: cover;
+    border: 2px solid #E67E22;
+    border-radius: 10px;
+    transition: width ease-in-out 0.5s;
+}
+ .galery-2>figure>img:hover{
+    width: 55%;
+ }
+/* rodapé */
+footer{
+    background-color: #333;
+    font-size: 100%;
+    padding: 40px 0;
+}
+.footer-top{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    flex-wrap: wrap;
+}
+.footer-nav ul,
+.social-nav ul{
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+    
+}
+footer a:link,
+footer a:link{
+    color: #FFF;
+    text-decoration: none;
+}
+ion-icon{
+    font-size: 150%;
+}
+.social-nav a{
+    color: #a8a7a1;
+    transition: 0.5s;
+}
+.social-nav a:hover{
+    color: #FFF;
+}
+footer p{
+    color: #81817d;
+    text-align: center;
+    margin-top: 30px;
+    letter-spacing: 1px;
+    word-spacing: 2px;
 }
