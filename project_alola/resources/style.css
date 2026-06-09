@@ -38,7 +38,9 @@ a {
 } 
 #pagina1 .section-title{
     text-align: center;
-    font-size: 10vh;
+    font-size: 5vw;
+    color: #692c54;
+    text-transform: uppercase;
 }
 .grid-produtos{
     display:flex;
@@ -46,12 +48,13 @@ a {
     justify-content: space-around;
 }
 .produto-card{
+    justify-items:center;
     margin: 20px 15px;
     background-color: #8c69777a;
     width: 25%;
 }
 .produto-card img{
-    width: 100%;
+    width: 90%;
 }
 /* Esconde o hambúrguer no desktop */
 .hamburger {
