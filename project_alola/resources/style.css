@@ -38,7 +38,7 @@ a {
 } 
 #pagina1 .section-title{
     text-align: center;
-    font-size: 5vw;
+    font-size: clamp(1rem, 4vw, 3rem);
     color: #692c54;
     text-transform: uppercase;
 }
@@ -71,23 +71,59 @@ a {
     transition: all 0.3s ease;
 }
 .hero{
-    margin:0;
+    position: relative; 
+    width: 100%;
+    margin: 0;
     padding: 0;
-    background-image: url('img/download\ \(2\).jpg');
-    background-size: cover;      
-    background-repeat: no-repeat;
-    min-height: 100vh;
+    overflow: hidden;
 }
+.hero img {
+    max-width: 1500px;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.hero-content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); 
+    left: 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.hero-content h1 {
+    font-size: clamp(2rem, 5vw, 6rem);
+    color:#7b1840 ;
+    font-family: sans-serif;
+    margin: 0;
+    position: relative;
+    top: -40px
+}
+.hero-content button {
+    padding: 12px 35px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #7b1840;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    align-self: flex-start; 
+}
+.hero-content button:hover {
+    background-color:#5c2147;
+}
+
 /* --- 3. Responsividade (Telas até 768px) --- */
 @media (max-width: 768px) {
     .hamburger {
-        display: flex; /* Mostra o hambúrguer no mobile */
+        display: flex; 
     }
-
     .nav-links {
         position: absolute;
-        top: 90px; /* Altura aproximada do seu cabeçalho */
-        right: -100%; /* Esconde o menu para fora da tela */
+        top: 90px;
+        right: -100%;
         flex-direction: column;
         background-color: #7b1840c4;
         width: 100%;
@@ -96,17 +132,12 @@ a {
         box-shadow: 0 10px 10px rgba(0,0,0,0.1);
         padding: 2rem 0;
     }
-
-    /* Quando o JS ativar a classe, o menu entra na tela */
     .nav-links.active {
         right: 0;
     }
-
     .nav-links li {
         margin: 1.5rem 0;
     }
-
-    /* BÔNUS: Efeito visual no botão Hambúrguer virando um "X" */
     .hamburger.active span:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
