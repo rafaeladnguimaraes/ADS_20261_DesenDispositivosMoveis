@@ -12,3 +12,16 @@ document.querySelectorAll('.nav-links a').forEach(link => {
         navLinks.classList.remove('active'); 
     });
 });
+
+function toggleGaleria(elementoClicado) {
+    // 1. Gira a setinha alterando a classe do cabeçalho
+    elementoClicado.classList.toggle('active');
+    
+    // 2. Encontra o container de fotos que está logo abaixo deste cabeçalho
+    const galeriaFotos = elementoClicado.nextElementSibling;
+    
+    // 3. Abre ou fecha adicionando a classe correspondente
+    if (galeriaFotos) {
+        galeriaFotos.classList.toggle('show');
+    }
+}
