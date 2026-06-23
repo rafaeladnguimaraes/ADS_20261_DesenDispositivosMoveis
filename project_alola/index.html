@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alola website</title>
+    <script src="logica.js" defer></script>
+    <link rel="stylesheet" href="resources/style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img class="logo" src="resources/img/logo.png" alt="logo">
+                <a href="index.html">Alola</a>
+            </div>
+            <div class="hamburger" id="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="nav-links-container">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre_nos.html">Sobre nós</a></li>
+                <li><a href="contato.html">Entre em contato</a></li>
+                <li>
+                    <button class="btn-carrinho-nav" id="btn-abrir-carrinho" aria-label="Abrir carrinho">
+                        🛒 <span class="carrinho-badge" id="carrinho-badge">0</span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+        <section class="hero">
+            <img src="resources/img/banner.jpg" alt="Banner Alola" class="hero-bg">
+
+            <div class="hero-content">
+                <h1>This is Alola.</h1>
+                <a href="sobre_nos.html" class="btn-hero">Saiba Mais</a>
+            </div>
+        </section>
+
+        <section id="pagina1" class="container">
+            <h1 class="section-title">Produtos</h1>
+            <div class="grid-produtos">
+                <div class="produto-card" data-id="1">
+                    <img src="resources/img/blusa_amarela.jpg" alt="Blusa flor">
+                    <div class="produto-info">
+                        <h3>Blusa flor</h3>
+                        <p class="preco">R$ 199,90</p>
+                        <button class="btn-adicionar-carrinho" data-nome="Blusa flor" data-preco="199.90">Adicionar ao carrinho</button>
+                    </div>
+                </div>
+                <div class="produto-card" data-id="2">
+                    <img src="resources/img/blusa_laranja.jpg" alt="Blusa laranja floral">
+                    <div class="produto-info">
+                        <h3>Blusa laranja floral</h3>
+                        <p class="preco">R$ 249,90</p>
+                        <button class="btn-adicionar-carrinho" data-nome="Blusa laranja floral" data-preco="249.90">Adicionar ao carrinho</button>
+                    </div>
+                </div>
+                <div class="produto-card" data-id="3">
+                    <img src="resources/img/blusa_rosa.jpg" alt="Blusa amarração rosa">
+                    <div class="produto-info">
+                        <h3>Blusa amarração rosa</h3>
+                        <p class="preco">R$ 89,90</p>
+                        <button class="btn-adicionar-carrinho" data-nome="Blusa amarração rosa" data-preco="89.90">Adicionar ao carrinho</button>
+                    </div>
+                </div>
+                <div class="produto-card" data-id="4">
+                    <img src="resources/img/blusa_salmao.jpg" alt="Blusa amarração estampada">
+                    <div class="produto-info">
+                        <h3>Blusa amarração estampada</h3>
+                        <p class="preco">R$ 150,00</p>
+                        <button class="btn-adicionar-carrinho" data-nome="Blusa amarração estampada" data-preco="150.00">Adicionar ao carrinho</button>
+                    </div>
+                </div>
+                <div class="produto-card" data-id="5">
+                    <img src="resources/img/blusa_verde.jpg" alt="Blusa amarração verde">
+                    <div class="produto-info">
+                        <h3>Blusa amarração verde</h3>
+                        <p class="preco">R$ 310,00</p>
+                        <button class="btn-adicionar-carrinho" data-nome="Blusa amarração verde" data-preco="310.00">Adicionar ao carrinho</button>
+                    </div>
+                </div>
+                <div class="produto-card" data-id="6">
+                    <img src="resources/img/blusa_branca.jpg" alt="Blusa alça branca">
+                    <div class="produto-info">
+                        <h3>Blusa alça branca</h3>
+                        <p class="preco">R$ 420,00</p>
+                        <button class="btn-adicionar-carrinho" data-nome="Blusa alça branca" data-preco="420.00">Adicionar ao carrinho</button>
+                    </div>
+                </div>
+                <div class="produto-card" data-id="7">
+                    <img src="resources/img/blusa_amarela.jpg" alt="Blusa flor">
+                    <div class="produto-info">
+                        <h3>Blusa flor</h3>
+                        <p class="preco">R$ 199,90</p>
+                        <button class="btn-adicionar-carrinho" data-nome="Blusa flor" data-preco="199.90">Adicionar ao carrinho</button>
+                    </div>
+                </div>
+                <div class="produto-card" data-id="8">
+                    <img src="resources/img/blusa_laranja.jpg" alt="Blusa laranja floral">
+                    <div class="produto-info">
+                        <h3>Blusa laranja floral</h3>
+                        <p class="preco">R$ 249,90</p>
+                        <button class="btn-adicionar-carrinho" data-nome="Blusa laranja floral" data-preco="249.90">Adicionar ao carrinho</button>
+                    </div>
+                </div>
+                <div class="produto-card" data-id="9">
+                    <img src="resources/img/blusa_rosa.jpg" alt="Blusa amarração rosa">
+                    <div class="produto-info">
+                        <h3>Blusa amarração rosa</h3>
+                        <p class="preco">R$ 89,90</p>
+                        <button class="btn-adicionar-carrinho" data-nome="Blusa amarração rosa" data-preco="89.90">Adicionar ao carrinho</button>
+                    </div>
+                </div>
+                <div class="produto-card" data-id="10">
+                    <img src="resources/img/blusa_salmao.jpg" alt="Blusa amarração estampada">
+                    <div class="produto-info">
+                        <h3>Blusa amarração estampada</h3>
+                        <p class="preco">R$ 150,00</p>
+                        <button class="btn-adicionar-carrinho" data-nome="Blusa amarração estampada" data-preco="150.00">Adicionar ao carrinho</button>
+                    </div>
+                </div>
+                <div class="produto-card" data-id="11">
+                    <img src="resources/img/blusa_verde.jpg" alt="Blusa amarração verde">
+                    <div class="produto-info">
+                        <h3>Blusa amarração verde</h3>
+                        <p class="preco">R$ 310,00</p>
+                        <button class="btn-adicionar-carrinho" data-nome="Blusa amarração verde" data-preco="310.00">Adicionar ao carrinho</button>
+                    </div>
+                </div>
+                <div class="produto-card" data-id="12">
+                    <img src="resources/img/blusa_branca.jpg" alt="Blusa alça branca">
+                    <div class="produto-info">
+                        <h3>Blusa alça branca</h3>
+                        <p class="preco">R$ 420,00</p>
+                        <button class="btn-adicionar-carrinho" data-nome="Blusa alça branca" data-preco="420.00">Adicionar ao carrinho</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <div class="carrinho-overlay" id="carrinho-overlay"></div>
+    <aside class="carrinho-panel" id="carrinho-panel" aria-hidden="true">
+        <div class="carrinho-header">
+            <h2>Seu Carrinho</h2>
+            <button class="btn-fechar-carrinho" id="btn-fechar-carrinho" aria-label="Fechar carrinho">&times;</button>
+        </div>
+        <ul class="carrinho-lista" id="carrinho-lista"></ul>
+        <div class="carrinho-vazio" id="carrinho-vazio">Seu carrinho está vazio.</div>
+        <div class="carrinho-footer">
+            <p class="carrinho-total">Total: <strong id="carrinho-total">R$ 0,00</strong></p>
+            <button class="btn-finalizar-compra" id="btn-finalizar-compra">Finalizar compra (simulação)</button>
+        </div>
+    </aside>
+
+    <div class="toast" id="toast"></div>
+
+    <footer>
+        <p>&copy; 2026 Alola — Moda sustentável e consciente.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alola - Sobre nós</title>
+    <script src="logica.js" defer></script>
+    <link rel="stylesheet" href="resources/style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img class="logo" src="resources/img/logo.png" alt="logo">
+                <a href="index.html">Alola</a>
+            </div>
+            <div class="hamburger" id="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="nav-links-container">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre_nos.html">Sobre nós</a></li>
+                <li><a href="contato.html">Entre em contato</a></li>
+                <li>
+                    <button class="btn-carrinho-nav" id="btn-abrir-carrinho" aria-label="Abrir carrinho">
+                        🛒 <span class="carrinho-badge" id="carrinho-badge">0</span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+        <section class="hero hero-sobre">
+            <img src="resources/img/banner4.jpg" alt="Banner Alola" class="hero-bg">
+            <div class="hero-content">
+                <h1>Nossa Trajetória</h1>
+            </div>
+        </section>
+
+        <section class="eco-section" id="eco-friendly">
+            <div class="eco-content">
+                <h2 class="section-title">Moda Eco Friendly</h2>
+                <p class="eco-intro">
+                    Na Alola, acreditamos que estilo e responsabilidade ambiental caminham juntos.
+                    Nossa marca é <strong>eco friendly</strong> em cada etapa da produção.
+                </p>
+                <div class="eco-grid">
+                    <div class="eco-card">
+                        <span class="eco-icon">🌿</span>
+                        <h3>Tecidos sustentáveis</h3>
+                        <p>Utilizamos materiais orgânicos e reciclados, reduzindo o impacto ambiental sem abrir mão da qualidade.</p>
+                    </div>
+                    <div class="eco-card">
+                        <span class="eco-icon">♻️</span>
+                        <h3>Produção consciente</h3>
+                        <p>Processos com menor consumo de água e energia, priorizando fornecedores que respeitam o meio ambiente.</p>
+                    </div>
+                    <div class="eco-card">
+                        <span class="eco-icon">📦</span>
+                        <h3>Embalagens recicláveis</h3>
+                        <p>Nossas embalagens são biodegradáveis e feitas com papel reciclado, sem plástico desnecessário.</p>
+                    </div>
+                    <div class="eco-card">
+                        <span class="eco-icon">💚</span>
+                        <h3>Moda com propósito</h3>
+                        <p>Cada peça Alola representa um compromisso com um futuro mais verde e uma indústria da moda mais ética.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container" id="pagina2">
+            <h2 class="section-title">Linha do Tempo</h2>
+            <div class="timeline">
+                
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>2015 - A Fundação</h3>
+                        <p>O início de tudo, onde os primeiros rascunhos ganharam vida no mercado.</p>
+                        
+                        <div class="galeria-expansivel">
+                            <div class="galeria-header" onclick="toggleGaleria(this)"> Ver Fotos <span>▼</span></div>
+                            <div class="galeria-fotos">
+                                <img src="resources/img/pacotes.jpg" alt="">
+                                <img src="resources/img/propaganda.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3>2017 - Expansão Nacional</h3>
+                        <p>Alcançamos novos horizontes e expandimos nossas operações em escala nacional.</p>
+                        
+                        <div class="galeria-expansivel">
+                            <div class="galeria-header" onclick="toggleGaleria(this)"> Ver Fotos <span>▼</span></div>
+                            <div class="galeria-fotos">
+                                <img src="resources/img/pacotes_2.jpg" alt="">
+                                <img src="resources/img/propaganda_2.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>2026 - Era Digital Avançada</h3>
+                        <p>Consolidação no ecossistema global com novos recursos inteligentes.</p>
+                        
+                        <div class="galeria-expansivel">
+                            <div class="galeria-header" onclick="toggleGaleria(this)"> Ver Fotos <span>▼</span></div>
+                            <div class="galeria-fotos">
+                                <img src="resources/img/pacotes_3.jpg" alt="">
+                                <img src="resources/img/novo_espaço.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Alola — Moda sustentável e consciente.</p>
+        </footer>
+
+    <div class="carrinho-overlay" id="carrinho-overlay"></div>
+    <aside class="carrinho-panel" id="carrinho-panel" aria-hidden="true">
+        <div class="carrinho-header">
+            <h2>Seu Carrinho</h2>
+            <button class="btn-fechar-carrinho" id="btn-fechar-carrinho" aria-label="Fechar carrinho">&times;</button>
+        </div>
+        <ul class="carrinho-lista" id="carrinho-lista"></ul>
+        <div class="carrinho-vazio" id="carrinho-vazio">Seu carrinho está vazio.</div>
+        <div class="carrinho-footer">
+            <p class="carrinho-total">Total: <strong id="carrinho-total">R$ 0,00</strong></p>
+            <button class="btn-finalizar-compra" id="btn-finalizar-compra">Finalizar compra (simulação)</button>
+        </div>
+    </aside>
+
+    <div class="toast" id="toast"></div>
+</body>
+</html>

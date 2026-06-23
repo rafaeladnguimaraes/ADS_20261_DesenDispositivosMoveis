@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alola - Entre em contato</title>
+    <script src="logica.js" defer></script>
+    <link rel="stylesheet" href="resources/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img class="logo" src="resources/img/logo.png" alt="logo">
+                <a href="index.html">Alola</a>
+            </div>
+            <div class="hamburger" id="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="nav-links-container">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre_nos.html">Sobre nós</a></li>
+                <li><a href="contato.html">Entre em contato</a></li>
+                <li>
+                    <button class="btn-carrinho-nav" id="btn-abrir-carrinho" aria-label="Abrir carrinho">
+                        🛒 <span class="carrinho-badge" id="carrinho-badge">0</span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+        <section class="contato-hero">
+            <h1>Fale Conosco</h1>
+            <p>Estamos prontos para ouvir sua opinião, dúvidas ou propostas comerciais.</p>
+        </section>
+
+        <section class="container" id="pagina3">
+            <h2 class="section-title">Contato</h2>
+            <div class="contato-wrapper">
+                
+                <div class="info-redes">
+                    <h3>Saiba Mais</h3>
+                    <p>Fique por dentro das nossas novidades e projetos diários acessando nossas redes sociais oficiais. Conecte-se conosco!</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="form-contato">
+                    <form id="form-contato" action="#" method="POST" novalidate>
+                        <div class="campo-form">
+                            <label for="nome">Nome completo</label>
+                            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required minlength="3" autocomplete="name">
+                            <span class="erro-campo" id="erro-nome"></span>
+                        </div>
+
+                        <div class="campo-form">
+                            <label for="telefone">Telefone</label>
+                            <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required autocomplete="tel">
+                            <span class="erro-campo" id="erro-telefone"></span>
+                        </div>
+
+                        <div class="campo-form">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" placeholder="seu@email.com" required autocomplete="email">
+                            <span class="erro-campo" id="erro-email"></span>
+                        </div>
+
+                        <div class="campo-form">
+                            <label for="assunto">Assunto</label>
+                            <select id="assunto" name="assunto" required>
+                                <option value="">Selecione um assunto</option>
+                                <option value="duvida">Dúvida sobre produto</option>
+                                <option value="pedido">Acompanhamento de pedido</option>
+                                <option value="parceria">Proposta comercial</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                            <span class="erro-campo" id="erro-assunto"></span>
+                        </div>
+
+                        <div class="campo-form">
+                            <label for="mensagem">Mensagem</label>
+                            <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem aqui..." rows="5" required minlength="10"></textarea>
+                            <span class="erro-campo" id="erro-mensagem"></span>
+                        </div>
+
+                        <div class="form-sucesso" id="form-sucesso" hidden>
+                            Mensagem enviada com sucesso! Entraremos em contato em breve. (Simulação)
+                        </div>
+
+                        <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="feedback-section">
+                <h2 class="section-title">O que dizem sobre nós</h2>
+                <div class="grid-feedbacks">
+                    <div class="feedback-card">
+                        <p>"Excelente atendimento e entrega extremamente rápida. Os produtos superaram as expectativas."</p>
+                        <h4>— Mariana Silva</h4>
+                    </div>
+                    <div class="feedback-card">
+                        <p>"Acompanho a trajetória deles desde 2024 e é incrível ver o compromisso com a inovação."</p>
+                        <h4>— Roberto Souza</h4>
+                    </div>
+                    <div class="feedback-card">
+                        <p>"Formulário fácil de usar e equipe de suporte muito atenciosa. Recomendo fortemente!"</p>
+                        <h4>— Ana Costa</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Alola — Moda sustentável e consciente.</p>
+        </footer>
+
+    <div class="carrinho-overlay" id="carrinho-overlay"></div>
+    <aside class="carrinho-panel" id="carrinho-panel" aria-hidden="true">
+        <div class="carrinho-header">
+            <h2>Seu Carrinho</h2>
+            <button class="btn-fechar-carrinho" id="btn-fechar-carrinho" aria-label="Fechar carrinho">&times;</button>
+        </div>
+        <ul class="carrinho-lista" id="carrinho-lista"></ul>
+        <div class="carrinho-vazio" id="carrinho-vazio">Seu carrinho está vazio.</div>
+        <div class="carrinho-footer">
+            <p class="carrinho-total">Total: <strong id="carrinho-total">R$ 0,00</strong></p>
+            <button class="btn-finalizar-compra" id="btn-finalizar-compra">Finalizar compra (simulação)</button>
+        </div>
+    </aside>
+
+    <div class="toast" id="toast"></div>
+</body>
+</html>

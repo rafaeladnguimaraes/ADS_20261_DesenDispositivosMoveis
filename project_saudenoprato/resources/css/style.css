@@ -1,0 +1,224 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    color: #555;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+header{
+    background-image: 
+        linear-gradient(rgba(7, 2, 2, .7), rgba(0,0,0,.7)),
+        url(img/img-hero-header.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+h1{
+    margin: 0;
+    margin-bottom: 10px;
+    color: #FFF;
+    font-size: 180%;
+    text-transform: uppercase;
+    font-weight: 300;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+}
+/* banner grande */
+.btn_full{
+    margin-right: 50px;
+    background-color: #E67E22;
+}
+.btn:link,
+.btn:visited{
+    display: inline-block;
+    border: 2px solid #E67E22;
+    color: #FFF;
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 25px;
+    transition: 0.2s;
+}
+.btn:hover,
+.btn:active{
+    border-color: #7a412b;
+    background-color: #7a2b2b6b;
+}
+.btn_full{
+    margin-right: 50px;
+    background-color: #E67E22;
+}
+.slogan{
+    margin-top: 150px;
+    margin-left: 10%;
+}
+/* cabeçalho */
+.main-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.main-nav>ul>li>a:link,
+.main-nav>ul>li>a:visited{
+    border-bottom: 2px transparent;
+    color: #ffedd5;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: border-bottom 0.4s;
+
+}
+.main-nav>ul>li>a:hover,
+.main-nav>ul>li>a:active{
+    border-bottom: 2px solid #755427;
+    font-weight: bolder;
+    color: #755427;
+    text-decoration: none;  
+    transition: 0.4s;
+}
+.main-nav>ul{
+    list-style: none;
+    display: flex;
+    width: 600px;
+    justify-content: space-around;
+}
+.logo{
+    height: 100px;
+}
+/* infos */
+section{
+    padding: 80px 0;
+}
+h2{
+    font-size: 180%;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+h2::after{
+    content: " ";
+    height: 2px;
+    width: 100px;
+    background-color: #d68b49;
+    display: block;
+    margin: 30px auto;
+}
+.top>p{
+    width: 70%;
+    margin: 0 auto;
+    line-height: 145%;
+}
+.info{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3%;
+    /* justify-content: space-around; */
+}
+.info>div{
+    flex-basis: 250px;
+    flex-grow: 1;
+    padding: 2%;
+}
+.sec_info ion-icon{
+    font-size: 350%;
+    color: #d68b49;
+}
+h3{
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+.info p{
+    font-size: 90%;
+    line-height: 145%;
+    text-align: justify;
+}
+/* galeria */
+.galery ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+.galery>ul>li{
+    flex-basis: 250px;
+    flex-grow: 1; 
+    overflow: hidden;
+}
+.galery>ul>li img{
+    width: 100%;
+    transform: scale(1.05);
+    transition: 0.5s;
+    filter:grayscale(45%);
+}
+.galery>ul>li img:hover,
+.galery>ul>li img:active{
+    transform: scale(1.15);
+    transition: 0.5s;
+    filter:grayscale(0%);
+}
+/* galeria 2*/
+.galery-2>figure{
+    width: 70%;
+    height: 450px;
+    /* background-color: #555; */
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.galery-2>figure>img{
+    width: 10%;
+    height: 100%;
+    object-fit: cover;
+    border: 2px solid #E67E22;
+    border-radius: 10px;
+    transition: width ease-in-out 0.5s;
+}
+ .galery-2>figure>img:hover{
+    width: 55%;
+ }
+/* rodapé */
+footer{
+    background-color: #333;
+    font-size: 100%;
+    padding: 40px 0;
+}
+.footer-top{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    flex-wrap: wrap;
+}
+.footer-nav ul,
+.social-nav ul{
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+    
+}
+footer a:link,
+footer a:link{
+    color: #FFF;
+    text-decoration: none;
+}
+ion-icon{
+    font-size: 150%;
+}
+.social-nav a{
+    color: #a8a7a1;
+    transition: 0.5s;
+}
+.social-nav a:hover{
+    color: #FFF;
+}
+footer p{
+    color: #81817d;
+    text-align: center;
+    margin-top: 30px;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
